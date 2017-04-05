@@ -1,31 +1,61 @@
 package com.twitter.poruke;
-
+/**
+ Klasa koja oznacava twitter poruku
+ 
+ @author user
+ @version 1.0
+ */
 public class TwitterPoruka {
-	
+	/**
+	 *Promenljiva koja sadrzi korisnicko ime osobe koja je objavila poruku
+	   */
 	private String korisnik;
+	/**
+	 *Promenljiva koja oznacava sadrzaj twitter poruke 
+	 */
 	private String poruka;
 	
+	/**
+	 * Metoda koja vraca autora poruke
+	 * @return Korisnicko ime osobe koja je objavila poruku
+	 */
 	public String getKorisnik() {
 		return korisnik;
 	}
 	
+	/**
+	 * Metoda za unosenje imena korisnika
+	 * @param korisnik Korisnicko ime osobe koje zelimo da unesemo
+	 * @throws java.lang.RuntimeException
+	 */
 	public void setKorisnik(String korisnik) {
 		if (korisnik==null || !korisnik.isEmpty())
 			throw new RuntimeException("Ime korisnika mora biti uneto");
 		this.korisnik = korisnik;
 	}
 	
+	/**
+	 * Metoda koja vraca zeljenu poruku
+	 * @return Poruka korisnika kojeg smo zeleli
+	 */
 	public String getPoruka() {
 		return "poruka";
 	}
 	
+	/**
+	 * Metoda kojom se vrsi unos poruke za odredjenog korisnika
+	 * @param poruka Sadrzaj poruke koji zelimo da postavimo
+	 * @throws java.lang.RuntimeException
+	 */
 	public void setPoruka(String poruka) {
 		if (this.poruka==null || this.poruka == new String("") || this.poruka.length()>140)
 			throw new RuntimeException("Poruka mora biti uneta i mora imati najvise 140 znakova");
 		this.poruka = poruka;
 	
 	}
-	
+	/**
+	 * Metoda koja konvertuje objekat klase TviterPoruka u tekstualni format
+	 */
 	public String toString(){
 		return "KORISNIK:"+korisnik+" PORUKA:"+poruka;
 	} 
