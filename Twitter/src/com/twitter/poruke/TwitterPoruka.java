@@ -2,7 +2,7 @@ package com.twitter.poruke;
 /**
  Klasa koja oznacava twitter poruku
  
- @author user
+ @author NikolaCukic
  @version 1.0
  */
 public class TwitterPoruka {
@@ -26,7 +26,7 @@ public class TwitterPoruka {
 	/**
 	 * Metoda za unosenje imena korisnika
 	 * @param korisnik Korisnicko ime osobe koje zelimo da unesemo
-	 * @throws java.lang.RuntimeException
+	 * @throws java.lang.RuntimeException String korisnik ne sme biti null ili prazan
 	 */
 	public void setKorisnik(String korisnik) {
 		if (korisnik==null || korisnik.isEmpty())
@@ -45,7 +45,7 @@ public class TwitterPoruka {
 	/**
 	 * Metoda kojom se vrsi unos poruke za odredjenog korisnika
 	 * @param poruka Sadrzaj poruke koji zelimo da postavimo
-	 * @throws java.lang.RuntimeException
+	 * @throws java.lang.RuntimeException Poruka ne sme biti null, prazna ili duza od 140 karaktera
 	 */
 	public void setPoruka(String poruka) {
 		if (poruka==null || poruka.isEmpty() || poruka.length()>140)
