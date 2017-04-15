@@ -55,6 +55,8 @@ public class TwitterPoruka {
 	}
 	/**
 	 * Metoda koja konvertuje objekat klase TviterPoruka u tekstualni format
+	 * 
+	 * @return String koji sadrzi informacije o korisniku i njegovoj poruci
 	 */
 	public String toString(){
 		return "KORISNIK:"+korisnik+" PORUKA:"+poruka;

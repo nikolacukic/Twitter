@@ -30,31 +30,26 @@ public class TwitterPorukaTest {
 	@Test(expected = java.lang.RuntimeException.class)
 	 	public void testSetKorisnikEmpty() {
 		poruka.setKorisnik("");
-	 	assertEquals(java.lang.RuntimeException.class, poruka.getKorisnik());
 	}
 	 	
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetKorisnikNull() {
 		poruka.setKorisnik(null);
-	 	assertEquals(java.lang.RuntimeException.class, poruka.getKorisnik());
 	}
 	 
 	@Test
 	public void testSetPoruka() {
 		poruka.setPoruka("Ovo je moj prvi tvit");
-	 	assertEquals("Ovo je moj prvi tvit", poruka.getPoruka());
 	}
 	 	
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetPorukaNull() {
 	 	poruka.setPoruka(null);
-	 	assertEquals(java.lang.RuntimeException.class, poruka.getPoruka());
 	}
 	 	
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetPorukaEmpty() {
 	 	poruka.setPoruka("");
-	 	assertEquals(java.lang.RuntimeException.class, poruka.getPoruka());
 	}
 	 	
 	@Test(expected = java.lang.RuntimeException.class)
@@ -62,7 +57,6 @@ public class TwitterPorukaTest {
 	 	poruka.setPoruka("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 	 					+"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
 	 					+"ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc");
-	 	assertEquals(java.lang.RuntimeException.class, poruka.getPoruka());
 	}
 	 
 	@Test
